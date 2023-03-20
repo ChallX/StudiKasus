@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="dikae"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-02-26 07:13:40 PM"/>
+        <attribute name="created" value="ZGlrYWU7SFAtMTQ7MjAyMy0wMi0yMTswODoxOTozMCBQTTsyMDg1"/>
+        <attribute name="edited" value="ZGlrYWU7SFAtMTQ7MjAyMy0wMi0yMTswOTowOTowMyBQTTsxOzIxOTM="/>
+        <attribute name="edited" value="TG91aXMgTWFyY2hhbGw7TEFQVE9QLTczNzM4NTg7MjAyMy0wMi0yNjswNzoxMzo0MCBQTTsxOzM2MzA="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="A" type="Integer" array="True" size="100"/>
+            <declare name="n, max" type="Integer" array="False" size=""/>
+            <output expression="&quot;Masukkan banyak data&quot;" newline="True"/>
+            <input variable="n"/>
+            <call expression="bacaArray(n,A)"/>
+            <call expression="cetakArray(n,A)"/>
+            <assign variable="max" expression="cariMax(n,A)"/>
+            <output expression="&quot;Data terbesar di dalam array : &quot; &amp; max" newline="True"/>
+        </body>
+    </function>
+    <function name="bacaArray" type="None" variable="">
+        <parameters>
+            <parameter name="n" type="Integer" array="False"/>
+            <parameter name="A" type="Integer" array="True"/>
+        </parameters>
+        <body>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <for variable="i" start="0" end="n-1" direction="inc" step="1">
+                <output expression="&quot;Masukkan data ke - &quot; &amp;  (i+1)" newline="True"/>
+                <input variable="a[i]"/>
+            </for>
+        </body>
+    </function>
+    <function name="carimax" type="Integer" variable="max">
+        <parameters>
+            <parameter name="n" type="Integer" array="False"/>
+            <parameter name="A" type="Integer" array="True"/>
+        </parameters>
+        <body>
+            <declare name="max, i" type="Integer" array="False" size=""/>
+            <assign variable="max" expression="A[0]"/>
+            <for variable="i" start="1" end="n-1" direction="inc" step="1">
+                <if expression="max &lt; A[i]">
+                    <then>
+                        <assign variable="max" expression="A[i]"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+        </body>
+    </function>
+    <function name="cetakArray" type="None" variable="">
+        <parameters>
+            <parameter name="n" type="Integer" array="False"/>
+            <parameter name="A" type="Integer" array="True"/>
+        </parameters>
+        <body>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <for variable="i" start="0" end="n-1" direction="inc" step="1">
+                <output expression="A[i]" newline="True"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

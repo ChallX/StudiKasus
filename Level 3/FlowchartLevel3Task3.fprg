@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Louis Marchall"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-02-26 06:59:43 PM"/>
+        <attribute name="created" value="TG91aXMgTWFyY2hhbGw7TEFQVE9QLTczNzM4NTg7MjAyMy0wMi0yNjswNjo1MTowNSBQTTszNTI0"/>
+        <attribute name="edited" value="TG91aXMgTWFyY2hhbGw7TEFQVE9QLTczNzM4NTg7MjAyMy0wMi0yNjswNjo1OTo0MyBQTTsyOzM2NDM="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="SisiA, SisiB, SisiC" type="Integer" array="False" size=""/>
+            <output expression="&quot;Masukkan SisiA&quot;" newline="True"/>
+            <input variable="SisiA"/>
+            <output expression="&quot;Masukkan SisiB&quot;" newline="True"/>
+            <input variable="SisiB"/>
+            <output expression="&quot;Masukkan SisiC&quot;" newline="True"/>
+            <input variable="SisiC"/>
+            <if expression="SisiA==SisiB &amp;&amp; SisiB==SisiC">
+                <then>
+                    <output expression="&quot;Segitiga Sama Sisi&quot;" newline="True"/>
+                </then>
+                <else>
+                    <if expression="SisiA == SisiB || SisiB == SisiC || SisiA == SisiC">
+                        <then>
+                            <output expression="&quot;Segitiga Sama Kaki&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <output expression="&quot;Segitiga Sembarang&quot;" newline="True"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Louis Marchall"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-02-26 07:11:10 PM"/>
+        <attribute name="created" value="TG91aXMgTWFyY2hhbGw7TEFQVE9QLTczNzM4NTg7MjAyMy0wMi0yNjswNzowMDozNyBQTTszNTI0"/>
+        <attribute name="edited" value="TG91aXMgTWFyY2hhbGw7TEFQVE9QLTczNzM4NTg7MjAyMy0wMi0yNjswNzoxMToxMCBQTTsxOzM2MjU="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="Angka1, Angka2, Angka3, Tengah" type="Integer" array="False" size=""/>
+            <output expression="&quot;Masukkan Angka-1&quot;" newline="True"/>
+            <input variable="Angka1"/>
+            <output expression="&quot;Masukkan Angka-2&quot;" newline="True"/>
+            <input variable="Angka2"/>
+            <output expression="&quot;Masukkan Angka-3&quot;" newline="True"/>
+            <input variable="Angka3"/>
+            <if expression="Angka1 &gt; Angka2">
+                <then>
+                    <if expression="Angka2 &gt; Angka3">
+                        <then>
+                            <assign variable="Tengah" expression="Angka2"/>
+                        </then>
+                        <else>
+                            <if expression="Angka1 &gt; Angka3">
+                                <then>
+                                    <assign variable="Tengah" expression="Angka3"/>
+                                </then>
+                                <else>
+                                    <assign variable="Tengah" expression="Angka1"/>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </then>
+                <else>
+                    <if expression="Angka1 &gt; Angka3">
+                        <then>
+                            <assign variable="Tengah" expression="Angka1"/>
+                        </then>
+                        <else>
+                            <if expression="Angka2 &gt; Angka3">
+                                <then>
+                                    <assign variable="Tengah" expression="Angka3"/>
+                                </then>
+                                <else>
+                                    <assign variable="Tengah" expression="Angka2"/>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <output expression="&quot;Bilangan Tengah Adalah &quot; &amp;Tengah" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

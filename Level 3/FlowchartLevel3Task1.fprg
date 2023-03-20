@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Louis Marchall"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-03-08 09:38:14 AM"/>
+        <attribute name="created" value="TG91aXMgTWFyY2hhbGw7TEFQVE9QLTczNzM4NTg7MjAyMy0wMy0wODswOTowOToxMiBBTTszNTE0"/>
+        <attribute name="edited" value="TG91aXMgTWFyY2hhbGw7TEFQVE9QLTczNzM4NTg7MjAyMy0wMy0wODswOTozODoxNCBBTTsxOzM2MjY="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="masuk" type="Integer" array="True" size="3"/>
+            <declare name="i, a, b, z" type="Integer" array="False" size=""/>
+            <for variable="i" start="0" end="2" direction="inc" step="1">
+                <output expression="&quot;masukkan angka &quot;" newline="True"/>
+                <input variable="masuk[i]"/>
+            </for>
+            <output expression="&quot;list = [&quot;" newline="False"/>
+            <for variable="i" start="0" end="1" direction="inc" step="1">
+                <output expression="masuk[i]&amp;&quot;,&quot;" newline="False"/>
+            </for>
+            <output expression="masuk[2] &amp; &quot;]&quot;" newline="True"/>
+            <for variable="a" start="0" end="1" direction="inc" step="1">
+                <for variable="b" start="a+1" end="2" direction="inc" step="1">
+                    <if expression="masuk[a] &gt; masuk[b]">
+                        <then>
+                            <assign variable="z" expression="masuk[a]"/>
+                            <assign variable="masuk[a]" expression="masuk[b]"/>
+                            <assign variable="masuk[b]" expression="z"/>
+                        </then>
+                        <else/>
+                    </if>
+                </for>
+            </for>
+            <output expression="&quot;sorting = [&quot;" newline="False"/>
+            <for variable="i" start="0" end="1" direction="inc" step="1">
+                <output expression="masuk[i]&amp; &quot;,&quot;" newline="False"/>
+            </for>
+            <output expression="masuk[2] &amp; &quot;]&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
